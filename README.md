@@ -43,19 +43,19 @@ These files will appear in the current directory:
 |File|Description|
 |---|---|
 |`README.md`|this file|
-|`rnaSeq-byBABS.nf|the nextflow script itself|
-|`fastq/single\_end`|the directory containing simulated single-end `fastq.gz` samples|
-|`fastq/paired\_end`|the directory containing simulated paired-end `fastq.gz` samples|
+|`rnaSeq-byBABS.nf`|the nextflow script itself|
+|`fastq/single\_end/`|the directory containing simulated single-end `fastq.gz` samples|
+|`fastq/paired\_end/`|the directory containing simulated paired-end `fastq.gz` samples|
 |`yml/single\_end.yml`|the example parameter file for the simulated single-end samples|
 |`yml/paired\_end.yml`|the example parameter file for the simulated paired-end samples|
 |`yml/modules.yml`|the configuration file containing the slurm modules to load|
 |`yml/multiqc\_config.yml`|the example MultiQC configuration file|
-|`r/analysis.r|the example R script which runs the statistical analysis|
-|`r/analysis_example.r|the example R script which runs the statistical analysis for the simulated samples|
+|`r/analysis.r`|the example R script which runs the statistical analysis|
+|`r/analysis_example.r`|the example R script which runs the statistical analysis for the simulated samples|
 |`csv/single\_end.csv`|the example design file for the simulated single-end samples|
 |`csv/paired\_end.csv`|the example design file for the simulated single-end samples|
 |`conf/fastq\_screen.conf`|the example FastQ Screen configuration file|
-|`png`|the directory containing the illustrations for this page|
+|`png/`|the directory containing the illustrations for this page|
 
 This is currently configured to run the rnaSeq-byBABS RNA-Seq analysis pipeline on The Crick CAMP HPC system.
 
@@ -276,7 +276,7 @@ Need to find out what's happening.
 [url_rnaseqc]: http://archive.broadinstitute.org/cancer/cga/rna-seqc
 [url_multiqc]: http://multiqc.info/
 
-[dag]: https://github.com/crickbabs/rnaSeq_byBABS/png/dag.png
-[pca]: https://github.com/crickbabs/rnaSeq_byBABS/png/single_end_pca.png
-[onto]: https://github.com/crickbabs/rnaSeq_byBABS/png/single_end_ontology.png
+[dag]: png/dag.png
+[pca]: png/single_end_pca.png
+[onto]: png/single_end_ontology.png
 
