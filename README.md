@@ -55,7 +55,7 @@ This is currently configured to run the rnaSeq-byBABS RNA-Seq analysis pipeline 
 To run Nextflow you will need to first load the Nextflow module. This
 can be done using the following command:
 
-	$ ml nextflow/0.27.2
+	$ module load nextflow/0.27.2
 
 ## <a name="design"></a> Specifying Samples via a Design File
 
