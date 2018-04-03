@@ -172,9 +172,9 @@ Feel to write your own script, but two scripts are provided with the pipeline in
 
 The `r/analysis_example.r` script is provided as a basic example for the test dataset.
 In addition to do a differential expression analysis with DESeq2, this script will create a PCA plot:
-![alt pca plot](pca/single_end_pca.png | width=480)
+<img src="pca/single_end_pca.jpg" alt="pca plot" style="width:480px;"/>
 , and will do a quick ontology analysis:
-![alt ontology plot](pca/single_end_ontology.png | width=480)
+<img src="pca/single_end_ontology.jpg" alt="ontology plot" style="width:480px;"/>
 
 The `r/analysis.r` script is a far more general one, which is aimed to be applied on any kind of experiment as a first quality control.
 Guys, your opinion about it will be very much appreciated.
