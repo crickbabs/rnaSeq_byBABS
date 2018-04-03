@@ -14,7 +14,7 @@ FSCREEN=conf/fastq_screen.conf
 # multiqc configuration file (not mandatory)
 MULTIQC_FILE=yml/multiqc_config.yml
 
-nextflow run rnaSeq-byBABS.nf \
+nextflow run main.nf \
 	--design "csv/paired_end.csv" \
 	--output_directory "nextflow_paired_end" \
 	--binomial_nomenclature "homo sapiens" \
