@@ -171,9 +171,10 @@ The process will call the R script specified by the `r_script` parameter.
 Feel to write your own script, but two scripts are provided with the pipeline in the [r directory](r).
 
 The `r/analysis_example.r` script is provided as a basic example for the test dataset.
-In addition to do a differential expression analysis with DESeq2, this script will create a PCA plot and will do a quick ontology analysis:
-<img src="png/single_end_pca.png" alt="pca plot" width="450"/>
-<img src="png/single_end_ontology.png" alt="ontology plot" width="450"/>
+In addition to do a differential expression analysis with DESeq2, this script will create a PCA plot:
+<p align="center"><img src="png/single_end_pca.png" alt="pca plot" width="480"/></p>
+,and will do a quick ontology analysis:
+<p align="center"><img src="png/single_end_ontology.png" alt="ontology plot" width="500"/></p>
 
 The `r/analysis.r` script is a far more general one, which is aimed to be applied on any kind of experiment as a first quality control.
 Guys, your opinion about it will be very much appreciated.
