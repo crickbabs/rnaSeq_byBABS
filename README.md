@@ -21,7 +21,7 @@ These are explained in more detail further down.
 ## The test data
 
 You can test the pipeline by using the provided simulated test dataset.
-Running the pipeline on it should take around 15 minutes.
+Running the pipeline on it should take no more than **15 minutes**.
 In the following, this dataset will be used as an example to illustrate how you can parametrise the pipeline for a real experiment.
 
 ## Obtaining the Files You Need
@@ -93,7 +93,7 @@ And the one for the paired end test data contains:
 
 All the parameters except `multiqc_config` are mandatory.
 
-|Parameter|Description|Specifically required by|
+|Parameter|Description|Required by|
 |---|---|---|
 |`design`|the path of the `csv` [design file](#design)|every processes because the sample column values will be used to name the output files, the experimental condition columns values will be used by [DESeq2](#deseq2)|
 |`output_directory`|the path to the directory that will contain all the files produced by the workflow|every processes|
@@ -102,13 +102,13 @@ All the parameters except `multiqc_config` are mandatory.
 |`read_length`|the read length|[STAR](#star), [RSeQC mismatch profile](#rseqc_mismatch_profile)|
 |`single_end`|the experiment is considered as single end if this flag is present and as paired end if this flag is absent|[cutadapt](#cutadapt), [STAR](#star), [RNA-SeQC](#rnaseqc)|
 |`modules`|the path of the `yml` module file that contains the list of the SLURM modules|every processes (each process needs to load its own modules)|
-|`genome_type`|the genome type of the organism in which the experiment has been done (`ensembl` most of time). This parameter is required to build the path of the STAR genome index.|[STAR](#star)|
-|`genome_version`|the genome version of the organism in which the experiment has been done (`36` or `38` most of time). This parameter is required to build the path of the STAR genome index.|[STAR](#star)|
-|`genome_release`|the genome release of the organism in which the experiment has been done (`86` or `89` most of time). This parameter is required to build the path of the STAR genome index.|[STAR](#star)|
-|`genome_sequence_extension`|the genome sequence extension of the organism in which the experiment has been done (`primary_assembly.fa` or `toplevel.fa` most of time). This parameter is required to build the path of the raw sequence of the genome of the organism.|[Picard multimetric](#picard_multimetrics), [RNA-SeQC](#rnaseqc)|
-|`fastq_screen_conf`|the path to the FastQ Screen configuration file which contains the paths of the bowtie2 indexes. The example file points to Harshil's folder at the moment.|[FastQ Screen](#fastq_screen)|
+|`genome_type`|the genome type of the organism in which the experiment has been done (`ensembl` most of time). This parameter is required to build the path of the STAR genome index|[STAR](#star)|
+|`genome_version`|the genome version of the organism in which the experiment has been done (`36` or `38` most of time). This parameter is required to build the path of the STAR genome index|[STAR](#star)|
+|`genome_release`|the genome release of the organism in which the experiment has been done (`86` or `89` most of time). This parameter is required to build the path of the STAR genome index|[STAR](#star)|
+|`genome_sequence_extension`|the genome sequence extension of the organism in which the experiment has been done (`primary_assembly.fa` or `toplevel.fa` most of time). This parameter is required to build the path of the raw sequence of the genome of the organism|[Picard multimetric](#picard_multimetrics), [RNA-SeQC](#rnaseqc)|
+|`fastq_screen_conf`|the path to the FastQ Screen configuration file which contains the paths of the bowtie2 indexes. The example file points to Harshil's folders at the moment|[FastQ Screen](#fastq_screen)|
 |`publish_directory_mode`|define if Nextflow will link, copy or move the output files (`symlink`, `link`, `copy`, `move`)|Nextflow|
-|`publish_directory_overwrite`|define if Nexflow will overwrite the output files or not (`true`, `false`)|NextFlow|
+|`publish_directory_overwrite`|define if Nexflow will overwrite the output files or not (`true`, `false`)|Nextflow|
 |`r_script`|the path to the R script that will perform the statistical analysis|[DESeq2](#deseq2)|
 |`multiqc_config`|the path to the MultiQC configuration file|[MultiQC](#multiqc)|
 

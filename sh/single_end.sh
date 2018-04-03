@@ -31,8 +31,8 @@ nextflow run rnaSeq-byBABS.nf \
 	--publish_directory_overwrite \
 	--r_script "r/analysis_example.r" \
 	--multiqc_config $MULTIQC_FILE \
-	-with-timeline $html_dir/timeline_paired_end.html \
-	-with-dag $dot_dir/dag_paired_end.dot \
-	-with-trace $txt_dir/trace_paired_end.txt \
+	-with-timeline $html_dir/timeline_single_end.html \
+	-with-dag $dot_dir/dag_single_end.dot \
+	-with-trace $txt_dir/trace_single_end.txt \
 	-resume
 
