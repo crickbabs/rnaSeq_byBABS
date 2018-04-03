@@ -1,0 +1,95 @@
+##############
+### DESIGN ###
+##############
+
+# the path of the experiment design file wich associates samples IDs to their
+# experimentals conditions (treatment, time, patient...)
+design: csv/paired_end.csv
+
+
+########################
+### OUTPUT DIRECTORY ###
+########################
+
+# this will be the name of the directory so no spaces, no special
+# characters...
+output_directory: nextflow_paired_end
+
+
+#############################
+### BINOMIAL NOMENCLATURE ###
+#############################
+
+binomial:
+   genus: homo
+   species: sapiens
+
+
+###################################
+### INFORMATION ABOUT THE READS ###
+###################################
+
+## is single end ?
+# can be: true or false
+single_end: false
+## strandedness
+# can be: none, forward, reverse
+strandedness: none
+## read length
+read_length: 77
+
+
+###############
+### MODULES ###
+###############
+
+modules: yml/modules.yml
+
+
+##################
+### ANNOTATION ###
+##################
+
+genome_type: ensembl
+genome_version: GRCh38
+genome_release: 86
+# this part of the file name depends on the species.
+# For example, it's "primary_assembly.fa" for human and mouse or
+# "toplevel.fa" for fly or yeast
+genome_sequence_extension: primary_assembly.fa
+
+
+##################################
+### FASTQ SCREEN CONFIGURATION ###
+##################################
+
+fastq_screen_conf: conf/fastq_screen.conf
+
+
+##########################
+### SESSION PARAMETERS ###
+##########################
+
+## do you the output files to be just linked or copied or moved... ?
+# can be: symlink, link, copy, move
+publish_directory_mode: symlink
+## do you the output files to be overwritten... ?
+# can be: true or false
+publish_directory_overwrite: true
+
+
+#############################################
+### DIFFERENTIAL GENE EXPRESSION ANALYSIS ###
+#############################################
+
+# the path to the R script
+r_script: r/analysis_example.r
+
+
+##################################
+### MULTIQC CONFIGURATION FILE ###
+##################################
+
+# the path to the config file (not mandatory)
+multiqc_config: yml/multiqc_config.yml
+
