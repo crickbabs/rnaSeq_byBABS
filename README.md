@@ -24,6 +24,13 @@ You can test the pipeline by using the provided simulated test dataset.
 Running the pipeline on it should take no more than **15 minutes**.
 In the following, this dataset will be used as an example to illustrate how you can parametrise the pipeline for a real experiment.
 
+## Loading the Nextflow Module
+
+To run Nextflow you will need to first load the Nextflow module. This
+can be done using the following command:
+
+	$ module load nextflow/0.27.2
+
 ## Obtaining the Files You Need
 
 	$ git clone https://github.com/crickbabs/rnaSeq_byBABS
@@ -48,14 +55,13 @@ These files should be in the current directory:
 |`conf/fastq_screen.conf`|the example FastQ Screen configuration file|
 |`png/`|the directory containing the illustrations for this page|
 
-This is currently configured to run the rnaSeq-byBABS RNA-Seq analysis pipeline on The Crick CAMP HPC system.
+This is currently configured to run the rnaSeq-byBABS RNA-Seq analysis pipeline on The Crick CAMP HPC system. If you want to test the pipeline immediately, the fastest way is to run it on the test data with:
 
-## Loading the Nextflow Module
+	$ sh sh/single_end.sh
 
-To run Nextflow you will need to first load the Nextflow module. This
-can be done using the following command:
+, or with:
 
-	$ module load nextflow/0.27.2
+	$ sh sh/paired_end.sh
 
 ## <a name="design"></a> Specifying Samples via a Design File
 
