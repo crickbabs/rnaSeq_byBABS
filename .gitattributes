@@ -1,1 +1,2 @@
-* linguist-detectable=Nextflow
+* linguist-vendored
+*.r linguist-vendored=false
